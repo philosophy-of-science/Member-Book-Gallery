@@ -1,0 +1,47 @@
+<!-- capture the CSS content as a Nunjucks variable -->
+{% capture css %}{% include style.css %}{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
+<div class="gallery">
+  {% for pub in gallery %}
+  <header class="gallery-header">
+    <a class="gallery-pub" href="{{ pub.pubLink }}">
+      <img src="{{ pub.pubLogo }}" alt="" />
+      <h2>{{ pub.pubName }}</h2>
+    </a>
+    <div class="social-media">
+      {% for media in pub.social %} {{ media | social }} {% endfor %}
+    </div>
+    {{ pub.pubDescription | addP }}
+    <p class="gallery-discount">
+      <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;{{pub.discount}}
+    </p>
+  </header>
+  <div class="gallery-container">
+    {% for book in pub.titles %}
+    <article class="gallery-card">
+      <a class="gallery-card__link" href="{{ book.link }}">
+        <div class="gallery-card__left">
+          <img src="{{ book.cover }}" alt="" />
+        </div>
+        <div class="gallery-card__right">
+          <div class="gallery-card__title-container">
+            <h2 class="gallery-card__title">{{ book.title }}</h2>
+          </div>
+          <div class="gallery-card__author-container">
+            <p class="gallery-card__author">{{ book.author }}</p>
+            <div class="gallery-card__publisher">
+              <img src="{{ pub.pubLogo }}" alt="" />
+              <p>{{ pub.pubName }} ({{ book.year }})</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
