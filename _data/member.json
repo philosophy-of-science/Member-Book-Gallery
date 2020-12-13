@@ -1,27 +1,69 @@
 [
   {
+    "first_name": "Michael",
+    "last_name": "Strevens",
+    "title": "The Knowledge Machine",
+    "co": "",
+    "publisher": "Liveright",
+    "year": 2020,
+    "link": "https://wwnorton.com/books/9781631491375",
+    "upload": "https://cdn.wwnorton.com/dam_booktitles/573/img/cover/9781631491375_300.jpeg",
+    "google": "Search for The Knowledge Machine on Google"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Zerilli",
+    "title": "A Citizen's Guide to Artificial Intelligence",
+    "co": "John Danaher et al.",
+    "publisher": "MIT Press",
+    "year": 2021,
+    "link": "https://mitpress.mit.edu/books/citizens-guide-artificial-intelligence",
+    "upload": "https://mitpress.mit.edu/sites/default/files/styles/large_book_cover/http/mitp-content-server.mit.edu%3A18180/books/covers/cover/%3Fcollid%3Dbooks_covers_0%26isbn%3D9780262044813%26type%3D.jpg?itok=8zMAASdv",
+    "google": "Search for A Citizen's Guide to Artificial Intelligence on Google"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Zerilli",
+    "title": "The Adaptable Mind",
+    "co": "",
+    "publisher": "Oxford University Press",
+    "year": 2020,
+    "link": "https://global.oup.com/academic/product/the-adaptable-mind-9780190067885",
+    "upload": "https://global.oup.com/academic/covers/pdp/9780190067885",
+    "google": "Search for The Adaptable Mind on Google"
+  },
+  {
+    "first_name": "Sharon",
+    "last_name": "Crasnow",
+    "title": "Routledge Handbook of Feminist Philosophy of Science",
+    "co": "Kristen Intemann",
+    "publisher": "Routledge",
+    "year": 2021,
+    "link": "https://www.routledge.com/The-Routledge-Handbook-of-Feminist-Philosophy-of-Science/Crasnow-Intemann/p/book/9781138579859",
+    "upload": "https://images.routledge.com/common/jackets/amazon/978113857/9781138579859.jpg",
+    "google": "Search for Routledge Handbook of Feminist Philosophy of Science on Google"
+  },
+  {
     "first_name": "Alison",
     "last_name": "Wylie",
     "title": "Evidential Reasoning in Archaeology",
     "co": "Robert Chapman",
     "publisher": "Bloomsbury Academic",
-    "year": "2016",
+    "year": 2016,
     "link": "https://www.bloomsbury.com/us/evidential-reasoning-in-archaeology-9781472528933/",
-    "upload": "https://media.bloomsbury.com/rep/f/9781472528933.jpg"
+    "upload": "https://media.bloomsbury.com/rep/f/9781472528933.jpg",
+    "google": "Search for Evidential Reasoning in Archaeology on Google"
   },
   {
-    "submitted": "2020/11/24 04:01 PM",
     "first_name": "Sabina",
     "last_name": "Leonelli",
-    "email": "director@philsci.org",
-    "access_code": "du#83tor",
     "title": "Model Organisms",
     "co": "Rachel Ankeny",
     "publisher": "Cambridge University Press",
     "year": 2020,
     "link": "https://www.cambridge.org/core/elements/model-organisms/F895B26EAC0373BCA5A138835AC73AEA",
-    "FIELD12": "",
-    "upload": "https://assets.cambridge.org/97811087/42320/cover/9781108742320.jpg"
+    "upload": "https://assets.cambridge.org/97811087/42320/cover/9781108742320.jpg",
+    "google": "Search for Model Organisms on Google"
   },
   {
     "first_name": "Angela",
@@ -31,6 +73,7 @@
     "publisher": "University of Chicago Press",
     "year": 2017,
     "link": "https://press.uchicago.edu/ucp/books/book/chicago/I/bo27128726.html",
-    "upload": "https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/75/9780226759449.jpg"
+    "upload": "https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/75/9780226759449.jpg",
+    "google": "Search for Idealization and the Aims of Science on Google"
   }
 ]

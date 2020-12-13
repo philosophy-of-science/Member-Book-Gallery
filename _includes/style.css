@@ -80,6 +80,7 @@
 }
 
 .gallery-card {
+  display: flex;
   flex-grow: 1;
   transition: box-shadow 200ms ease-out;
   margin: 0.5em;
