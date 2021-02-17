@@ -1,4 +1,4 @@
-# PSA Book Gallery and Members' Books
+# PSA Members' Books Gallery
 
 This app uses Eleventy to generate HTML pages for virtual book galleries.
 
