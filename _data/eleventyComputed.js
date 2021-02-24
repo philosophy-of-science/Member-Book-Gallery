@@ -1,16 +1,16 @@
 module.exports = {
   eleventyComputed: {
-    memberBooksSorted: data => {
-      const sortedTitles = data.member.sort((a, b) => {
-        if (a.last_name.toLowerCase() < b.last_name.toLowerCase()) {
-          return -1;
+    memberData: data => {
+      console.log(data);
+      const shuffle = arr => {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
         }
-        if (a.last_name.toLowerCase() > b.last_name.toLowerCase()) {
-          return 1;
-        }
-        return 0;
-      });
-      return sortedTitles;
+        return arr;
+      };
+      const shuffledData = shuffle(data.member);
+      return shuffledData;
     },
   },
 };
