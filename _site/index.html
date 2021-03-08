@@ -1,465 +1,739 @@
 
 <style>
-  .gallery{font-size:16px}@media (min-width:576px){.gallery{font-size:16.5px}}@media (min-width:768px){.gallery{font-size:17px}}@media (min-width:992px){.gallery{font-size:18px}}.gallery-header{border:1px solid #bbb;border-bottom:none;background:#f7f7f7;padding:1em}.gallery-header img{height:3em;margin:0 .25em 0 0!important}.gallery-pub{display:flex;align-items:center;text-decoration:none;color:currentColor}.gallery-pub h2{margin:0;font-size:2em;font-weight:700}.social-media{margin:1em 0}.social-media a{display:inline-block;margin:.25em;border-radius:4px;padding:.25em;text-decoration:none;white-space:nowrap;color:#fff}.social-media a:first-child{margin-left:0}.gallery-discount{display:inline-block;border-radius:4px;background:#222;padding:.25em .5em;color:#fff;font-weight:700}.gallery-container{display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:2em;border:1px solid #bbb;padding:1em}.gallery-card{display:flex;flex-grow:1;transition:box-shadow .2s ease-out;margin:.5em;border:1px solid #eee;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);max-width:500px;width:100%}@media (min-width:576px){.gallery-card{flex-grow:0}}@media (min-width:768px){.gallery-card{flex-grow:0;width:calc(50% - 1em);margin:.5em}}.gallery-card:hover{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}.gallery-card__link{display:flex;width:100%;height:100%;text-decoration:none;color:currentColor}.gallery-card__link:hover{opacity:1;text-decoration:none;color:#000}.gallery-card__left{position:relative;flex-shrink:0;padding-top:49.17%;width:33%;height:0;overflow:hidden}.gallery-card__left img{position:absolute;top:0;left:0;margin:0!important;width:100%;height:100%}.gallery-card__right{display:flex;flex-direction:column;padding:.5em .75em;overflow:hidden}.gallery-card__title{margin:0;line-height:1.1;font-size:.9em!important;font-weight:600!important}@media (min-width:576px){.gallery-card__title{font-size:1em!important}}@media (min-width:992px){.gallery-card__title{font-size:1.2em!important;line-height:1.2}}.gallery-card__author-container{margin-top:auto}.gallery-card__author{margin:0 0 .5em;border-bottom:1px solid #eee;padding:.25em .25em .25em 0;font-size:.95em}.gallery-card__publisher{display:flex;align-items:center;margin:.25em 0 0;font-size:90%;font-weight:300}.gallery-card__publisher img{margin:0 .5em 0 0!important;height:2em}.gallery-card__publisher p{margin:0;font-size:.9em;line-height:1.1}.gallery-divider{margin:1em 0;background:#f7f7f7;height:1em}
+  *{box-sizing:border-box;margin:0;padding:0}.gallery{background-color:#eee;padding:40px;border-radius:10px}.gallery-container{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:40px}@media (min-width:576px){.gallery-container{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}}@media (min-width:768px){.gallery-container{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}}.gallery-card__link{background:#fff;border-radius:10px;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);color:currentColor;text-decoration:none;transition:box-shadow 150ms}.gallery-card__link:hover{text-decoration:none;box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}.gallery-card__top{position:relative;height:250px;overflow:hidden;border-top-left-radius:10px;border-top-right-radius:10px;display:flex;justify-content:center;align-items:center}.gallery-card__top img:first-child{position:absolute;width:100%;height:100%!important;filter:blur(25px) contrast(90%);transform:scale(1.5);border-top-left-radius:10px;border-top-right-radius:10px}.gallery-card__top img:last-child{height:200px!important;width:auto;position:relative;border-radius:10px;box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)}.gallery-card__bottom{height:calc(100% - 250px);padding:15px 25px;display:flex;flex-direction:column;justify-content:space-between}.gallery-card__title-container{margin-bottom:25px}.gallery-card__title{margin-bottom:0;font-size:115%;font-weight:700}.gallery-card__author{margin-bottom:5px;padding-bottom:5px;border-bottom:1px solid #ddd}.gallery-card__publisher p{color:#555;text-transform:uppercase;margin-bottom:0;font-size:max(12px,85%);line-height:1.2}
 </style>
-
+<p>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="currentColor"
+    class="bi bi-lightbulb"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"
+    />
+  </svg>
+  Are you a PSA Member who has published a book in the last five years? Add it
+  to the gallery by completing our
+  <a href="https://forms.gle/YSLCdG6TSLpNpjYz7">Member Book Upload</a>
+  form.
+</p>
 <div class="gallery">
-  <div class="gallery-container">
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.cambridge.org/core/elements/model-organisms/F895B26EAC0373BCA5A138835AC73AEA">
-        <div class="gallery-card__left">
-          <img src="https://assets.cambridge.org/97811087/42320/cover/9781108742320.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Model Organisms</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Sabina Leonelli,
-              Rachel Ankeny 
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Cambridge University Press (2020)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://press.princeton.edu/books/hardcover/9780691172460/on-purpose">
-        <div class="gallery-card__left">
-          <img src="https://pup-assets.imgix.net/onix/images/9780691172460.jpg?w" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">On Purpose</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Michael Ruse
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Princeton University Press (2017)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://global.oup.com/academic/product/the-fight-against-doubt-9780190869229?cc=us&lang=en&">
-        <div class="gallery-card__left">
-          <img src="https://global.oup.com/academic/covers/pdp/9780190869229" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">The Fight Against Doubt</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Inmaculada de Melo-Martín,
-              Kristen Intemann 
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Oxford University Press (2018)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://global.oup.com/academic/product/the-adaptable-mind-9780190067885">
-        <div class="gallery-card__left">
-          <img src="https://global.oup.com/academic/covers/pdp/9780190067885" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">The Adaptable Mind</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              John Zerilli
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Oxford University Press (2020)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.terrybristol.org/">
-        <div class="gallery-card__left">
-          <img src="https://static.wixstatic.com/media/5dc7c6_812b6dfb820b48b39dcba1c7398dad37~mv2.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Give Space My Love: An Intellectual Odyssey with Dr. Stephen Hawking</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Terry Bristol
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Institute for Science, Engineering and Public Policy (2016)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.routledge.com/The-Routledge-Handbook-of-Feminist-Philosophy-of-Science/Crasnow-Intemann/p/book/9781138579859">
-        <div class="gallery-card__left">
-          <img src="https://images.routledge.com/common/jackets/amazon/978113857/9781138579859.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Routledge Handbook of Feminist Philosophy of Science</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Sharon Crasnow,
-              Kristen Intemann 
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Routledge (2021)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.taylorfrancis.com/books/perspectives-classification-synthetic-sciences-julia-bursten/e/10.4324/9781315098838">
-        <div class="gallery-card__left">
-          <img src="https://images.tandf.co.uk/common/jackets/agentjpg/978113829/9781138298101.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Perspectives on Classification in Synthetic Sciences: Unnatural Kinds</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Julia Bursten
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Routledge Press (2019)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://global.oup.com/academic/product/the-problem-of-war-9780190867577?cc=us&lang=en&">
-        <div class="gallery-card__left">
-          <img src="https://global.oup.com/academic/covers/pdp/9780190867577" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">The Problem of War</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Michael Ruse
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Oxford University Press (2018)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://press.uchicago.edu/ucp/books/book/chicago/I/bo27128726.html">
-        <div class="gallery-card__left">
-          <img src="https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/75/9780226759449.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Idealization and the Aims of Science</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Angela Potochnik
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>University of Chicago Press (2017)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://wwnorton.com/books/9781631491375">
-        <div class="gallery-card__left">
-          <img src="https://cdn.wwnorton.com/dam_booktitles/573/img/cover/9781631491375_300.jpeg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">The Knowledge Machine</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Michael Strevens
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Liveright (2020)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.bloomsbury.com/us/science-and-hypothesis-9781350026773/">
-        <div class="gallery-card__left">
-          <img src="https://media.bloomsbury.com/rep/f/9781350026773.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Science and Hypothesis: The Complete Text</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              David Stump,
-              Henri Poincaré, Mélanie Frappier, Andrea Smith 
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Bloomsbury (2017)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://mitpress.mit.edu/books/eugenic-mind-project">
-        <div class="gallery-card__left">
-          <img src="https://philsci.org/photos/72158_02192021122403.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">The Eugenic Mind Project</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Rob Wilson
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>MIT Press (2018)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://global.oup.com/academic/product/darwinism-as-religion-9780190241025?cc=us&lang=en&">
-        <div class="gallery-card__left">
-          <img src="https://global.oup.com/academic/covers/pop-up/9780190241025" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Darwinism as Religion</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Michael Ruse
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Oxford University Press (2017)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://global.oup.com/academic/product/beyond-chance-and-credence-9780198865094?lang=en&cc=uk">
-        <div class="gallery-card__left">
-          <img src="https://global.oup.com/academic/covers/pdp/9780198865094" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Beyond Chance and Credence: A theory of hybrid probabilities</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Wayne Myrvold
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Oxford University Press (2021)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.bloomsbury.com/us/evidential-reasoning-in-archaeology-9781472528933/">
-        <div class="gallery-card__left">
-          <img src="https://media.bloomsbury.com/rep/f/9781472528933.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Evidential Reasoning in Archaeology</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Alison Wylie,
-              Robert Chapman 
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Bloomsbury Academic (2016)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.cambridge.org/us/academic/subjects/statistics-probability/statistical-theory-and-methods/statistical-inference-severe-testing-how-get-beyond-statistics-wars?format=PB">
-        <div class="gallery-card__left">
-          <img src="https://assets.cambridge.org/97811076/64647/cover/9781107664647.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Deborah Mayo
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Cambridge University Press (2018)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://press.uchicago.edu/ucp/books/book/chicago/T/bo28301818.html">
-        <div class="gallery-card__left">
-          <img src="https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/56/9780226563268.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">The Third Lens: Metaphor and the Creation of Modern Cell Biology</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Andrew Reynolds
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>University of Chicago Press (2018)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://mitpress.mit.edu/books/citizens-guide-artificial-intelligence">
-        <div class="gallery-card__left">
-          <img src="https://philsci.org/photos/72156_02192021122134.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">A Citizen's Guide to Artificial Intelligence</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              John Zerilli,
-              John Danaher et al. 
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>MIT Press (2021)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://oxford.universitypressscholarship.com/view/10.1093/oso/9780199967452.001.0001/oso-9780199967452">
-        <div class="gallery-card__left">
-          <img src="https://oxford.universitypressscholarship.com/view/covers/9780199967452.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Explaining Cancer: Finding Order in Disorder</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Anya Plutynski
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Oxford University Press (2018)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="gallery-card">
-      <a class="gallery-card__link" href="https://www.routledge.com/Philosophy-of-Population-Health-Ethics-and-Evidence-in-the-New-Public/Valles/p/book/9781138059900">
-        <div class="gallery-card__left">
-          <img src="https://images.routledge.com/common/jackets/crclarge/978113805/9781138059900.jpg" alt="" />
-        </div>
-        <div class="gallery-card__right">
-          <div class="gallery-card__title-container">
-            <h2 class="gallery-card__title">Philosophy of Population Health: Philosophy for a New Public Health Era</h2>
-          </div>
-          <div class="gallery-card__author-container">
-            <p class="gallery-card__author">
-              Sean A. Valles
-            </p>
-
-            <div class="gallery-card__publisher">
-              <p>Routledge Press (2018)</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-  </div>
-  <p>
-    💡 Are you a PSA Member who has published a book in the last five years? Add
-    it to the gallery by completing our
-    <a
-      href="https://www.viethconsulting.com/members/form_edit.php?org_id=PSA&fid=3859977"
-      >Member Book Upload</a
+  <div class="gallery-container"><a
+      class="gallery-card__link"
+      href="https://www.terrybristol.org/"
+      id="give-space-my-love:-an-intellectual-odyssey-with-dr.-stephen-hawking"
     >
-    form.
-  </p>
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://static.wixstatic.com/media/5dc7c6_812b6dfb820b48b39dcba1c7398dad37~mv2.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://static.wixstatic.com/media/5dc7c6_812b6dfb820b48b39dcba1c7398dad37~mv2.jpg"
+          alt="Give Space My Love: An Intellectual Odyssey with Dr. Stephen Hawking"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Give Space My Love: An Intellectual Odyssey with Dr. Stephen Hawking</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Terry Bristol
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Institute for Science, Engineering and Public Policy (2016)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://oxford.universitypressscholarship.com/view/10.1093/oso/9780199967452.001.0001/oso-9780199967452"
+      id="explaining-cancer:-finding-order-in-disorder"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://oxford.universitypressscholarship.com/view/covers/9780199967452.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://oxford.universitypressscholarship.com/view/covers/9780199967452.jpg"
+          alt="Explaining Cancer: Finding Order in Disorder"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Explaining Cancer: Finding Order in Disorder</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Anya Plutynski
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Oxford University Press (2018)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://global.oup.com/academic/product/the-adaptable-mind-9780190067885"
+      id="the-adaptable-mind"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780190067885"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780190067885"
+          alt="The Adaptable Mind"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">The Adaptable Mind</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            John Zerilli
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Oxford University Press (2020)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.taylorfrancis.com/books/perspectives-classification-synthetic-sciences-julia-bursten/e/10.4324/9781315098838"
+      id="perspectives-on-classification-in-synthetic-sciences:-unnatural-kinds"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://images.tandf.co.uk/common/jackets/agentjpg/978113829/9781138298101.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://images.tandf.co.uk/common/jackets/agentjpg/978113829/9781138298101.jpg"
+          alt="Perspectives on Classification in Synthetic Sciences: Unnatural Kinds"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Perspectives on Classification in Synthetic Sciences: Unnatural Kinds</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Julia Bursten
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Routledge Press (2019)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://wwnorton.com/books/9781631491375"
+      id="the-knowledge-machine"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://cdn.wwnorton.com/dam_booktitles/573/img/cover/9781631491375_300.jpeg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://cdn.wwnorton.com/dam_booktitles/573/img/cover/9781631491375_300.jpeg"
+          alt="The Knowledge Machine"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">The Knowledge Machine</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Michael Strevens
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Liveright (2020)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://global.oup.com/academic/product/beyond-chance-and-credence-9780198865094?lang=en&cc=uk"
+      id="beyond-chance-and-credence:-a-theory-of-hybrid-probabilities"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780198865094"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780198865094"
+          alt="Beyond Chance and Credence: A theory of hybrid probabilities"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Beyond Chance and Credence: A theory of hybrid probabilities</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Wayne Myrvold
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Oxford University Press (2021)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.degruyter.com/document/doi/10.1515/9783110685046/html"
+      id="fault-traing:-against-quine-duhem.-an-empiricist-theory-of-background-knowledge"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://www.degruyter.com/document/cover/isbn/9783110685046/product"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://www.degruyter.com/document/cover/isbn/9783110685046/product"
+          alt="Fault-Traing: Against Quine-Duhem. An Empiricist Theory of Background Knowledge"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Fault-Traing: Against Quine-Duhem. An Empiricist Theory of Background Knowledge</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Sam Mitchell
+          </p>
+          <div class="gallery-card__publisher">
+            <p>De Gruyter (2020)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://mitpress.mit.edu/books/eugenic-mind-project"
+      id="the-eugenic-mind-project"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://philsci.org/photos/72158_02192021122403.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://philsci.org/photos/72158_02192021122403.jpg"
+          alt="The Eugenic Mind Project"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">The Eugenic Mind Project</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Rob Wilson
+          </p>
+          <div class="gallery-card__publisher">
+            <p>MIT Press (2018)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://global.oup.com/academic/product/the-problem-of-war-9780190867577?cc=us&lang=en&"
+      id="the-problem-of-war"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780190867577"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780190867577"
+          alt="The Problem of War"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">The Problem of War</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Michael Ruse
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Oxford University Press (2018)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.bloomsbury.com/us/science-and-hypothesis-9781350026773/"
+      id="science-and-hypothesis:-the-complete-text"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://media.bloomsbury.com/rep/f/9781350026773.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://media.bloomsbury.com/rep/f/9781350026773.jpg"
+          alt="Science and Hypothesis: The Complete Text"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Science and Hypothesis: The Complete Text</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            David Stump, Henri Poincaré, Mélanie Frappier, Andrea Smith 
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Bloomsbury (2017)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.bloomsbury.com/us/evidential-reasoning-in-archaeology-9781472528933/"
+      id="evidential-reasoning-in-archaeology"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://media.bloomsbury.com/rep/f/9781472528933.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://media.bloomsbury.com/rep/f/9781472528933.jpg"
+          alt="Evidential Reasoning in Archaeology"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Evidential Reasoning in Archaeology</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Alison Wylie, Robert Chapman 
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Bloomsbury Academic (2016)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://press.uchicago.edu/ucp/books/book/chicago/T/bo28301818.html"
+      id="the-third-lens:-metaphor-and-the-creation-of-modern-cell-biology"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/56/9780226563268.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/56/9780226563268.jpg"
+          alt="The Third Lens: Metaphor and the Creation of Modern Cell Biology"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">The Third Lens: Metaphor and the Creation of Modern Cell Biology</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Andrew Reynolds
+          </p>
+          <div class="gallery-card__publisher">
+            <p>University of Chicago Press (2018)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.routledge.com/The-Routledge-Handbook-of-Feminist-Philosophy-of-Science/Crasnow-Intemann/p/book/9781138579859"
+      id="routledge-handbook-of-feminist-philosophy-of-science"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://images.routledge.com/common/jackets/amazon/978113857/9781138579859.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://images.routledge.com/common/jackets/amazon/978113857/9781138579859.jpg"
+          alt="Routledge Handbook of Feminist Philosophy of Science"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Routledge Handbook of Feminist Philosophy of Science</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Sharon Crasnow, Kristen Intemann 
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Routledge (2021)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://press.uchicago.edu/ucp/books/book/chicago/I/bo27128726.html"
+      id="idealization-and-the-aims-of-science"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/75/9780226759449.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://press.uchicago.edu/dam/ucp/books/jacket/978/02/26/75/9780226759449.jpg"
+          alt="Idealization and the Aims of Science"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Idealization and the Aims of Science</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Angela Potochnik
+          </p>
+          <div class="gallery-card__publisher">
+            <p>University of Chicago Press (2017)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.routledge.com/Philosophy-of-Population-Health-Ethics-and-Evidence-in-the-New-Public/Valles/p/book/9781138059900"
+      id="philosophy-of-population-health:-philosophy-for-a-new-public-health-era"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://images.routledge.com/common/jackets/crclarge/978113805/9781138059900.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://images.routledge.com/common/jackets/crclarge/978113805/9781138059900.jpg"
+          alt="Philosophy of Population Health: Philosophy for a New Public Health Era"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Philosophy of Population Health: Philosophy for a New Public Health Era</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Sean A. Valles
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Routledge Press (2018)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://global.oup.com/academic/product/the-fight-against-doubt-9780190869229?cc=us&lang=en&"
+      id="the-fight-against-doubt"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780190869229"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pdp/9780190869229"
+          alt="The Fight Against Doubt"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">The Fight Against Doubt</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Inmaculada de Melo-Martín, Kristen Intemann 
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Oxford University Press (2018)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://press.princeton.edu/books/hardcover/9780691172460/on-purpose"
+      id="on-purpose"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://pup-assets.imgix.net/onix/images/9780691172460.jpg?w"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://pup-assets.imgix.net/onix/images/9780691172460.jpg?w"
+          alt="On Purpose"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">On Purpose</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Michael Ruse
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Princeton University Press (2017)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://global.oup.com/academic/product/darwinism-as-religion-9780190241025?cc=us&lang=en&"
+      id="darwinism-as-religion"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pop-up/9780190241025"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://global.oup.com/academic/covers/pop-up/9780190241025"
+          alt="Darwinism as Religion"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Darwinism as Religion</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Michael Ruse
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Oxford University Press (2017)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.cambridge.org/us/academic/subjects/statistics-probability/statistical-theory-and-methods/statistical-inference-severe-testing-how-get-beyond-statistics-wars?format=PB"
+      id="statistical-inference-as-severe-testing:-how-to-get-beyond-the-statistics-wars"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://assets.cambridge.org/97811076/64647/cover/9781107664647.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://assets.cambridge.org/97811076/64647/cover/9781107664647.jpg"
+          alt="Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Deborah Mayo
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Cambridge University Press (2018)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://www.cambridge.org/core/elements/model-organisms/F895B26EAC0373BCA5A138835AC73AEA"
+      id="model-organisms"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://assets.cambridge.org/97811087/42320/cover/9781108742320.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://assets.cambridge.org/97811087/42320/cover/9781108742320.jpg"
+          alt="Model Organisms"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">Model Organisms</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            Sabina Leonelli, Rachel Ankeny 
+          </p>
+          <div class="gallery-card__publisher">
+            <p>Cambridge University Press (2020)</p>
+          </div>
+        </div>
+      </div>
+    </a><a
+      class="gallery-card__link"
+      href="https://mitpress.mit.edu/books/citizens-guide-artificial-intelligence"
+      id="a-citizen's-guide-to-artificial-intelligence"
+    >
+      <div class="gallery-card__top">
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://philsci.org/photos/72156_02192021122134.jpg"
+          alt=""
+          height="200"
+          width="131"
+          load="lazy"
+        />
+        <img
+          src="https://res.cloudinary.com/philosophy-of-science-association/image/fetch/c_scale,f_auto,h_200/https://philsci.org/photos/72156_02192021122134.jpg"
+          alt="A Citizen's Guide to Artificial Intelligence"
+          height="200"
+          width="131"
+          load="lazy"
+        />
+      </div>
+      <div class="gallery-card__bottom">
+        <div class="gallery-card__title-container">
+          <p class="gallery-card__title">A Citizen's Guide to Artificial Intelligence</p>
+        </div>
+        <div class="gallery-card__author-container">
+          <p class="gallery-card__author">
+            John Zerilli, John Danaher et al. 
+          </p>
+          <div class="gallery-card__publisher">
+            <p>MIT Press (2021)</p>
+          </div>
+        </div>
+      </div>
+    </a></div>
 </div>
