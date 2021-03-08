@@ -1,7 +1,7 @@
 {
   "name": "book-gallery",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
+  "description": "A book gallery for members of the Philosophy of Science Association",
   "main": "index.js",
   "scripts": {
     "fb": "node convertCSVtoJSON && npx @11ty/eleventy"
