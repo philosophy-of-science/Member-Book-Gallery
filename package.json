@@ -4,7 +4,8 @@
   "description": "A book gallery for members of the Philosophy of Science Association",
   "main": "index.js",
   "scripts": {
-    "fb": "node convertCSVtoJSON && npx @11ty/eleventy"
+    "fb": "node convertCSVtoJSON && npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",

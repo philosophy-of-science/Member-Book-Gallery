@@ -1,4 +1,4 @@
-# PSA Members' Books Gallery
+# PSA Member Book Gallery
 
 This app uses Eleventy to generate HTML pages for virtual book galleries. The [live gallery](https://www.philsci.org/member_book_gallery.php) is available on the [Philosophy of Science Association](https://philsci.org) website.
 
